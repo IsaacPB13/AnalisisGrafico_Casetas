@@ -5,8 +5,6 @@ from tkinter import ttk
 from tkinter import messagebox
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from pathlib import Path
-import io
-from PIL import Image
 
 #Diseño de la ventana
 class VentanaResultados(ttk.Frame):
