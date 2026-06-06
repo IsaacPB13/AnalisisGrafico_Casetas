@@ -59,6 +59,12 @@ def formatearDf(df):
     df_filtrado['Hora'] = df_filtrado['Hora'].astype(str).str.replace(r'\.', '', regex=True).str.strip() #Limpiar Am, pm
     df_filtrado['Hora'] = pd.to_datetime(df_filtrado['Hora'], errors='coerce') #Forzar solo hora a datatime
     df_filtrado['Hora'] = df_filtrado['Hora'].dt.strftime('%H:%M:%S') #Formatear a 24h
+   
+    #Obteniendo la fecha para nombrar los archivos de salida
+    df_filtrado['Fecha'] = pd.to_datetime(df['Fecha'], format='%y/%m/%d')
+    mes = df_filtrado['Fecha'].iloc[0].month
+    anio = df_filtrado['Fecha'].iloc[0].year
+   
     #Se hacen dos copias, uno compacto y otro extenso
     df_compacto = df_filtrado.copy()
     df_extendido = df_filtrado.copy()
@@ -68,7 +74,7 @@ def formatearDf(df):
     df_compacto["Clase"] = df_compacto["Clase"].str.replace(r'^C\d*$', 'C', regex=True)
     df_compacto["Clase"] = df_compacto["Clase"].replace('M', 'A')
     
-    return df_compacto, df_extendido
+    return df_compacto, df_extendido, mes, anio
 #-----------------------------------------------------------------------------
 """
 df = pd.read_excel("13_03_2026.xlsx") #Cambiar por recibir de interfaz

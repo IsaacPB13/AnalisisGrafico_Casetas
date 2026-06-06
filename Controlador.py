@@ -16,7 +16,7 @@ def generarFlujo(ruta_archivo, update_progress):
     df = pd.read_excel(ruta_archivo) #Leyendo archivo
     bandera = validandoTabla(df)
     if bandera==True:
-        df_compacto, df_extenso = formatearDf(df)  
+        df_compacto, df_extenso, mes, anio = formatearDf(df)  
         # Paso 2: generación de gráficas
         update_progress(60)
         figs_totales = []
@@ -36,7 +36,7 @@ def generarFlujo(ruta_archivo, update_progress):
         
         # Paso 3: listo
         update_progress(100)
-        return tabla_Ingresos, tabla_frecuencias, tabla_Ingresos_ext, tabla_frecuencias_ext, figs_totales
+        return tabla_Ingresos, tabla_frecuencias, tabla_Ingresos_ext, tabla_frecuencias_ext, figs_totales, mes, anio
         #RETORNAR A LA INTERFAZ
     else:
         messagebox.showerror(

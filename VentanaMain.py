@@ -84,7 +84,7 @@ class VentanaMain(ttk.Frame):
 
             try:
 
-                df1, df2, df3, df4, figs = generarFlujo(
+                df1, df2, df3, df4, figs, mes, anio = generarFlujo(
                     self.ruta_archivo,
                     update_progress=self.actualizar_barra
                 )
@@ -93,7 +93,7 @@ class VentanaMain(ttk.Frame):
                 self.after(
                     0,
                     lambda: self.mostrar_resultados(
-                        df1, df2, df3, df4, figs
+                        df1, df2, df3, df4, figs, mes, anio
                     )
                 )
 
@@ -123,7 +123,7 @@ class VentanaMain(ttk.Frame):
         self.update_idletasks()
 
     #PARA LA VENTANA DE LOS RESULTADOS
-    def mostrar_resultados(self, df1, df2, df3, df4, figs):
+    def mostrar_resultados(self, df1, df2, df3, df4, figs, mes, anio):
 
         ventana = tk.Toplevel(self)
 
@@ -136,7 +136,9 @@ class VentanaMain(ttk.Frame):
             df2,
             df3,
             df4,
-            figs
+            figs,
+            mes,
+            anio
         )
 
 app = tk.Tk()

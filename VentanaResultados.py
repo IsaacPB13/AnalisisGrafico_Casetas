@@ -9,7 +9,7 @@ from pathlib import Path
 #Diseño de la ventana
 class VentanaResultados(ttk.Frame):
 
-    def __init__(self, parent, df1, df2, df3, df4, figs):
+    def __init__(self, parent, df1, df2, df3, df4, figs, mes, anio):
 
         super().__init__(parent)
         self.pack(fill="both", expand=True)
@@ -20,6 +20,8 @@ class VentanaResultados(ttk.Frame):
         self.df3 = df3
         self.df4 = df4
         self.figs = figs
+        self.mes = mes
+        self.anio = anio
         self.indice = 0
 
         # ================= BOTONES =================
@@ -113,19 +115,19 @@ class VentanaResultados(ttk.Frame):
         directorio = Path.home() / "Desktop"
 
         self.df1.to_excel(
-            directorio / "tabla_ingresos_compactos.xlsx"
+            directorio / f"tabla_ingresos_compactos_{self.mes}_{self.anio}.xlsx"
         )
 
         self.df2.to_excel(
-            directorio / "tabla_frecuencias_compactos.xlsx"
+            directorio / f"tabla_frecuencias_compactos_{self.mes}_{self.anio}.xlsx"
         )
 
         self.df3.to_excel(
-            directorio / "tabla_ingresos_extendido.xlsx"
+            directorio / f"tabla_ingresos_extendido_{self.mes}_{self.anio}.xlsx"
         )
 
         self.df4.to_excel(
-            directorio / "tabla_frecuencias_extendido.xlsx"
+            directorio / f"tabla_frecuencias_extendido_{self.mes}_{self.anio}.xlsx"
         )
 
         messagebox.showinfo(
@@ -143,7 +145,7 @@ class VentanaResultados(ttk.Frame):
 
         for i, fig in enumerate(self.figs, start=1):
 
-            ruta = directorio / f"Grafica_{i}.png"
+            ruta = directorio / f"Grafica_{i}_{self.mes}_{self.anio}.png"
 
             fig.savefig(
                 ruta,
