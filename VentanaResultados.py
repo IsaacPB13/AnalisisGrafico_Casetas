@@ -112,23 +112,215 @@ class VentanaResultados(ttk.Frame):
 
     def descargarTablas(self):
 
+        catalogo_meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        
         directorio = Path.home() / "Desktop"
 
-        self.df1.to_excel(
-            directorio / f"tabla_ingresos_compactos_{self.mes}_{self.anio}.xlsx"
-        )
+        match self.mes:
+            
+            case 1:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[0]}_{self.anio}.xlsx"
+                )
 
-        self.df2.to_excel(
-            directorio / f"tabla_frecuencias_compactos_{self.mes}_{self.anio}.xlsx"
-        )
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[0]}_{self.anio}.xlsx"
+                )
 
-        self.df3.to_excel(
-            directorio / f"tabla_ingresos_extendido_{self.mes}_{self.anio}.xlsx"
-        )
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[0]}_{self.anio}.xlsx"
+                )
 
-        self.df4.to_excel(
-            directorio / f"tabla_frecuencias_extendido_{self.mes}_{self.anio}.xlsx"
-        )
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[0]}_{self.anio}.xlsx"
+                )
+
+            case 2:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[1]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[1]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[1]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[1]}_{self.anio}.xlsx"
+                )
+
+            case 3:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[2]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[2]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[2]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[2]}_{self.anio}.xlsx"
+                )
+
+            case 4:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[3]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[3]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[3]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[3]}_{self.anio}.xlsx"
+                )    
+
+            case 5:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[4]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[4]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[4]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[4]}_{self.anio}.xlsx"
+                )
+
+            case 6:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[5]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[5]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[5]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[5]}_{self.anio}.xlsx"
+                )
+
+            case 7:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[6]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[6]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[6]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[6]}_{self.anio}.xlsx"
+                )
+
+            case 8:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[7]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[7]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[7]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[7]}_{self.anio}.xlsx"
+                )
+
+            case 9:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[8]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[8]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[8]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[8]}_{self.anio}.xlsx"
+                )
+
+            case 10:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[9]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[9]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[9]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[9]}_{self.anio}.xlsx"
+                )
+            
+            case 11:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[10]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[10]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[10]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[10]}_{self.anio}.xlsx"
+                )
+
+            case 12:
+                self.df1.to_excel(
+                    directorio / f"tabla_ingresos_compactos_{catalogo_meses[11]}_{self.anio}.xlsx"
+                )
+
+                self.df2.to_excel(
+                    directorio / f"tabla_frecuencias_compactos_{catalogo_meses[11]}_{self.anio}.xlsx"
+                )
+
+                self.df3.to_excel(
+                    directorio / f"tabla_ingresos_extendido_{catalogo_meses[11]}_{self.anio}.xlsx"
+                )
+
+                self.df4.to_excel(
+                    directorio / f"tabla_frecuencias_extendido_{catalogo_meses[11]}_{self.anio}.xlsx"
+                )
 
         messagebox.showinfo(
             "Aviso",
@@ -141,17 +333,121 @@ class VentanaResultados(ttk.Frame):
 
     def descargarGraficas(self):
 
+        catalogo_meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+
         directorio = Path.home() / "Desktop"
 
         for i, fig in enumerate(self.figs, start=1):
 
-            ruta = directorio / f"Grafica_{i}_{self.mes}_{self.anio}.png"
+            match self.mes:
 
-            fig.savefig(
-                ruta,
-                dpi=300,
-                bbox_inches="tight"
-            )
+                case 1:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[0]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+                
+                case 2:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[1]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 3:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[2]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 4:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[3]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 5:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[4]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 6:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[5]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 7:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[6]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 8:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[7]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 9:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[8]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 10:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[9]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 11:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[10]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
+
+                case 12:
+                    ruta = directorio / f"Grafica_{i}_{catalogo_meses[11]}_{self.anio}.png"
+
+                    fig.savefig(
+                        ruta,
+                        dpi=300,
+                        bbox_inches="tight"
+                    )
 
         messagebox.showinfo(
             "Aviso",
